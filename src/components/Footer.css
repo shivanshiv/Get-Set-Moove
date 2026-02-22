@@ -1,0 +1,44 @@
+/* Footer */
+footer {
+  padding: 50px;
+  text-align: center;
+  background: rgba(15, 23, 42, 0.9);
+  border-top: 1px solid rgba(20,184,166,0.3);
+  width: 100%;
+}
+
+footer p {
+  color: #ccc;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  footer {
+    padding: 30px 20px;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  footer {
+    padding: 25px 15px;
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  footer p {
+    font-size: 16px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  footer {
+    padding: 50px;
+  }
+}

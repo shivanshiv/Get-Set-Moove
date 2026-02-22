@@ -1,0 +1,243 @@
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-logo {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-bottom: 5px;
+  filter: drop-shadow(0 0 20px rgba(20,184,166,0.3));
+}
+
+.hero-content {
+  z-index: 2;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1 {
+  font-size: 72px;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 50%, #14b8a6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 18px 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(20,184,166,0.4);
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(20,184,166,0.6);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #14b8a6;
+}
+
+.btn-secondary:hover {
+  background: rgba(20,184,166,0.1);
+  transform: translateY(-3px);
+}
+
+/* Floating Elements */
+.floating-box {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(20,184,166,0.4);
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-box:nth-child(1) {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.floating-box:nth-child(2) {
+  top: 60%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.floating-box:nth-child(3) {
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .hero {
+    padding: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 32px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+  }
+  
+  .main-logo {
+    max-width: 300px;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .hero h1 {
+    font-size: 42px;
+  }
+  
+  .btn {
+    padding: 16px 35px;
+    font-size: 17px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .hero h1 {
+    font-size: 52px;
+  }
+  
+  .cta-buttons {
+    flex-direction: row;
+    gap: 20px;
+    align-items: normal;
+  }
+  
+  .btn {
+    padding: 18px 40px;
+    font-size: 18px;
+    width: auto;
+    max-width: none;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .hero h1 {
+    font-size: 62px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .hero h1 {
+    font-size: 72px;
+  }
+}
