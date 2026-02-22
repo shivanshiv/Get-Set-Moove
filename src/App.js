@@ -16,11 +16,6 @@ function App() {
         <Services />
         <Quote />
         <Contact />
-        <div className="test-image-container" style={{ padding: '20px', textAlign: 'center', zIndex: '10', position: 'relative' }}>
-          <h3>Test Image:</h3>
-          <img src="/images/download.jpg" alt="Download Test" style={{ maxWidth: '300px', height: 'auto', border: '2px solid #14b8a6', borderRadius: '10px' }} />
-          <p>Image should be visible if loading is working correctly</p>
-        </div>
       </main>
       <Footer />
     </div>
