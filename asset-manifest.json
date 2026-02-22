@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Get-Set-Moove/static/css/main.1eb3d36f.css",
+    "main.js": "/Get-Set-Moove/static/js/main.06f3b041.js",
+    "static/js/453.51fb546f.chunk.js": "/Get-Set-Moove/static/js/453.51fb546f.chunk.js",
+    "index.html": "/Get-Set-Moove/index.html",
+    "main.1eb3d36f.css.map": "/Get-Set-Moove/static/css/main.1eb3d36f.css.map",
+    "main.06f3b041.js.map": "/Get-Set-Moove/static/js/main.06f3b041.js.map",
+    "453.51fb546f.chunk.js.map": "/Get-Set-Moove/static/js/453.51fb546f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1eb3d36f.css",
+    "static/js/main.06f3b041.js"
+  ]
+}
