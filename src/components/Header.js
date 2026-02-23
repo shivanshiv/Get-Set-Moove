@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <nav>
       <div className="logo-container">
-        <img src="/images/header_logo.png" alt="Get Set Move Logo" className="header-logo" />
+        <img src={process.env.PUBLIC_URL + '/images/header_logo.png'} alt="Get Set Move Logo" className="header-logo" />
       </div>
       <div className="logo-text">GET SET MOOVE</div>
       <div className={`hamburger-menu ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
