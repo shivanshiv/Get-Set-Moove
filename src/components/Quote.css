@@ -1,17 +1,17 @@
 /* Quote Form Section */
 .quote-section {
   padding: 60px 50px;
-  background: rgba(20,184,166,0.08);
+  background: rgba(20, 184, 166, 0.08);
   width: 100%;
 }
 
 .quote-form {
   max-width: 600px;
   margin: 0 auto;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   padding: 50px;
   border-radius: 20px;
-  border: 1px solid rgba(20,184,166,0.3);
+  border: 1px solid rgba(20, 184, 166, 0.3);
   backdrop-filter: blur(10px);
 }
 
@@ -21,6 +21,7 @@
   margin-bottom: 30px;
   background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -61,10 +62,13 @@
 .form-group select,
 .form-group textarea {
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   padding: 15px;
-  border: 1px solid rgba(20,184,166,0.3);
+  border: 1px solid rgba(20, 184, 166, 0.3);
   border-radius: 10px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   color: #fff;
   font-size: 16px;
   transition: all 0.3s;
@@ -75,7 +79,7 @@
 .form-group textarea:focus {
   outline: none;
   border-color: #14b8a6;
-  box-shadow: 0 0 20px rgba(20,184,166,0.3);
+  box-shadow: 0 0 20px rgba(20, 184, 166, 0.3);
 }
 
 /* Mobile Responsive */
@@ -83,16 +87,16 @@
   .quote-section {
     padding: 50px 20px;
   }
-  
+
   .quote-form {
     padding: 30px;
   }
-  
+
   .form-row {
     flex-direction: column;
     gap: 0;
   }
-  
+
   .form-row .form-group {
     margin-bottom: 25px;
   }
@@ -103,20 +107,20 @@
   .quote-section {
     padding: 30px 15px;
   }
-  
+
   .quote-form {
     padding: 20px;
     max-width: 100%;
   }
-  
+
   .quote-form h2 {
     font-size: 28px;
   }
-  
+
   .form-group label {
     font-size: 14px;
   }
-  
+
   .form-group input,
   .form-group select,
   .form-group textarea {
@@ -130,7 +134,7 @@
   .quote-form h2 {
     font-size: 32px;
   }
-  
+
   .form-group input,
   .form-group select,
   .form-group textarea {
