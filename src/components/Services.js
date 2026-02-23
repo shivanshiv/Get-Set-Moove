@@ -10,9 +10,9 @@ const services = [
   },
   {
     icon: "🏢",
-    title: "Long Distance Moving",
+    title: "Local & Long Distance Moving",
     description:
-      "Reliable long-distance moving solutions designed to transport your belongings safely and efficiently across cities or provinces."
+      "Reliable local and long-distance moving solutions designed to transport your belongings safely and efficiently across cities or provinces."
   },
   {
     icon: "💼",
@@ -38,7 +38,7 @@ const Services = () => {
   return (
     <section className="services" id="services">
       <h2 className="section-title">Our Services</h2>
-      
+
       {/* Company Info Banner */}
       <div className="company-banner">
         <p>Get Set Moove is a moving company serving those in British Columbia and Alberta. They are Canada based and offer the following services:</p>
