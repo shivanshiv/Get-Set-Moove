@@ -3,16 +3,16 @@ import './Services.css';
 
 const services = [
   {
-    icon: "🏠",
-    title: "Residential Moving",
-    description:
-      "Professional residential moving services for your home. We handle everything from packing to unpacking with care and attention to detail."
-  },
-  {
     icon: "🏢",
     title: "Local & Long Distance Moving",
     description:
       "Reliable local and long-distance moving solutions designed to transport your belongings safely and efficiently across cities or provinces."
+  },
+  {
+    icon: "🏠",
+    title: "Residential Moving",
+    description:
+      "Professional residential moving services for your home. We handle everything from packing to unpacking with care and attention to detail."
   },
   {
     icon: "💼",
@@ -40,10 +40,6 @@ const Services = () => {
       <h2 className="section-title">Our Services</h2>
 
       {/* Company Info Banner */}
-      <div className="company-banner">
-        <p>Get Set Moove is a moving company serving those in British Columbia and Alberta. They are Canada based and offer the following services:</p>
-      </div>
-
       <div className="services-grid">
         {services.map(({ icon, title, description }) => (
           <div className="service-card" key={title}>

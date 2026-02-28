@@ -7,6 +7,9 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  /* offset fixed header so content doesn’t sit underneath it */
+  padding-top: 120px;
+  box-sizing: border-box;
 }
 
 .main-logo {
@@ -20,6 +23,15 @@
 .hero-content {
   z-index: 2;
   animation: fadeInUp 1s ease-out;
+  /* make sure the hero content doesn't run edge-to-edge and
+     matches the horizontal padding used by other sections (e.g.
+     .services). also center the content on wide screens */
+  padding: 0 20px;
+  box-sizing: border-box;
+  max-width: 1000px;
+  margin: 0 auto;
+  /* add extra top margin as another safeguard against overlap */
+  margin-top: 20px;
 }
 
 @keyframes fadeInUp {
@@ -54,9 +66,17 @@
 }
 
 .hero p {
-  font-size: 24px;
+  /* match the size used in service section text for consistency */
+  font-size: 18px;
+  line-height: 1.6;
   margin-bottom: 40px;
   color: #ccc;
+  /* limit paragraph width and center so it doesn’t stretch too far
+     on large displays, matching the constrained look of service
+     text blocks */
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta-buttons {
@@ -159,6 +179,10 @@
     font-size: 42px;
   }
 
+  .hero {
+    padding-top: 100px;
+  }
+
   .cta-buttons {
     flex-direction: column;
   }
@@ -168,6 +192,13 @@
 @media only screen and (max-width: 600px) {
   .hero {
     padding: 20px;
+    /* extra-large clearance for very small phones (iPhone SE) */
+    padding-top: 150px;
+    /* allow the hero to grow instead of cutting off the buttons
+       when top padding pushes content below viewport */
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 60px; /* ensure bottom space for the button */
   }
   
   .hero h1 {
@@ -175,7 +206,7 @@
   }
   
   .hero p {
-    font-size: 18px;
+    font-size: 16px;
   }
   
   .main-logo {
