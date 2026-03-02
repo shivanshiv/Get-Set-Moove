@@ -8,7 +8,7 @@
   position: relative;
   overflow: hidden;
   /* offset fixed header so content doesn’t sit underneath it */
-  padding-top: 120px;
+    padding-top: 80px;
   box-sizing: border-box;
 }
 
@@ -30,8 +30,8 @@
   box-sizing: border-box;
   max-width: 1000px;
   margin: 0 auto;
-  /* add extra top margin as another safeguard against overlap */
-  margin-top: 20px;
+    /* remove extra top offset so flex centering works consistently */
+    margin-top: 0;
 }
 
 @keyframes fadeInUp {
@@ -192,8 +192,8 @@
 @media only screen and (max-width: 600px) {
   .hero {
     padding: 20px;
-    /* extra-large clearance for very small phones (iPhone SE) */
-    padding-top: 150px;
+    /* balanced clearance so content can remain centered on tiny phones */
+    padding-top: 80px;
     /* allow the hero to grow instead of cutting off the buttons
        when top padding pushes content below viewport */
     height: auto;
@@ -270,5 +270,68 @@
 @media only screen and (min-width: 1200px) {
   .hero h1 {
     font-size: 72px;
+  }
+}
+
+/* Devices with limited viewport height (e.g., Nest Hub, short displays) */
+@media only screen and (max-height: 700px) {
+  .hero {
+    /* reduce top offset so content can fit vertically and remain centered */
+    padding-top: 60px;
+    /* let the hero grow instead of clipping content */
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+    padding-bottom: 80px;
+  }
+
+  /* For Nest Hub / short displays: keep buttons side-by-side, smaller, centered */
+  .cta-buttons {
+    flex-direction: row;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .btn {
+    /* make buttons smaller so both fit comfortably */
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 32px;
+    width: auto;
+    max-width: 200px;
+    box-sizing: border-box;
+  }
+}
+
+/* Nest Hub / wide but short displays (e.g. 1024x600) - give extra top clearance */
+@media only screen and (min-width: 900px) and (max-height: 700px) {
+  .hero {
+    padding-top: 140px; /* more space so header doesn't overlap the logo */
+  }
+
+  .main-logo {
+    max-width: 480px; /* slightly smaller so it fits below header */
+  }
+}
+
+/* iPhone SE and similar very narrow/short phones */
+@media only screen and (max-width: 375px) and (max-height: 667px) {
+  .hero {
+    /* increase top clearance so header doesn't overlap the logo */
+    padding-top: 120px;
+    /* keep content vertically centered where possible */
+    min-height: 100vh;
+  }
+
+  .main-logo {
+    max-width: 220px; /* scale logo down on tiny phones */
+  }
+
+  .hero h1 {
+    font-size: 28px;
   }
 }
