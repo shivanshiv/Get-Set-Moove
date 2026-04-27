@@ -32,6 +32,7 @@ html {
   font-size: 32px;
   font-weight: bold;
   background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 30px rgba(20,184,166,0.5);
@@ -39,6 +40,29 @@ html {
   margin: 0;
   flex-grow: 1;
   text-align: center;
+}
+
+.desktop-nav-links {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+.desktop-nav-links li {
+  margin: 0;
+}
+
+.desktop-nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.desktop-nav-links a:hover {
+  color: #14b8a6;
 }
 
 /* Hamburger Menu - Visible on all devices */
@@ -148,5 +172,16 @@ html {
   .mobile-nav-links a {
     padding: 12px 15px;
     font-size: 15px;
+  }
+}
+
+/* Desktop navigation */
+@media (min-width: 769px) {
+  .desktop-nav-links {
+    display: flex;
+  }
+  
+  .hamburger-menu {
+    display: none;
   }
 }

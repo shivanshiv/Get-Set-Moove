@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <section className="contact-section" id="contact">
       <div className="contact-container">
-        <h2>Contact Us</h2>
+        <h2 className="section-title">Contact Us</h2>
         <div className="contact-info-centered">
           <div className="contact-item">
             <h3>Phone</h3>

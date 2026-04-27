@@ -23,14 +23,6 @@
   font-weight: 500;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 48px;
-  margin-bottom: 30px;
-  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 .services-grid {
   display: flex;
@@ -115,9 +107,6 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .section-title {
-    font-size: 36px;
-  }
   
   .services-grid {
     grid-template-columns: 1fr;
@@ -152,9 +141,6 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .section-title {
-    font-size: 42px;
-  }
   
   .service-card {
     padding: 30px;
@@ -163,9 +149,6 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .section-title {
-    font-size: 48px;
-  }
   .services-grid {
     gap: 30px;
   }

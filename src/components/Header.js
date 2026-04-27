@@ -18,6 +18,13 @@ const Header = () => {
         <img src={process.env.PUBLIC_URL + '/images/header_logo.png'} alt="Get Set Move Logo" className="header-logo" />
       </div>
       <div className="logo-text">GET SET MOOVE</div>
+      <ul className="desktop-nav-links">
+        <li><a href="/#home">Home</a></li>
+        <li><a href="/#services">Our Services</a></li>
+        <li><a href="/#quote">Get Quote</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/photos">Photos</a></li>
+      </ul>
       <div className={`hamburger-menu ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <div className="hamburger-line"></div>
         <div className="hamburger-line"></div>
@@ -26,10 +33,11 @@ const Header = () => {
       {menuOpen && (
         <div className="mobile-menu-popover">
           <ul className="mobile-nav-links">
-            <li><a href="#home" onClick={closeMenu}>Home</a></li>
-            <li><a href="#services" onClick={closeMenu}>Our Services</a></li>
-            <li><a href="#quote" onClick={closeMenu}>Get Quote</a></li>
-            <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
+            <li><a href="/#home" onClick={closeMenu}>Home</a></li>
+            <li><a href="/#services" onClick={closeMenu}>Our Services</a></li>
+            <li><a href="/#quote" onClick={closeMenu}>Get Quote</a></li>
+            <li><a href="/#contact" onClick={closeMenu}>Contact</a></li>
+            <li><a href="/photos" onClick={closeMenu}>Photos</a></li>
           </ul>
         </div>
       )}

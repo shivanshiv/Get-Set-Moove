@@ -25,6 +25,28 @@ main {
   align-items: center;
 }
 
+.section-title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 42px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .section-title {
+    font-size: 32px;
+  }
+}
+
 /* Animated Background */
 .bg-animation {
   position: fixed;

@@ -15,15 +15,6 @@
   backdrop-filter: blur(10px);
 }
 
-.quote-form h2 {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 30px;
-  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 .success-message {
   text-align: center;
@@ -113,9 +104,6 @@
     max-width: 100%;
   }
 
-  .quote-form h2 {
-    font-size: 28px;
-  }
 
   .form-group label {
     font-size: 14px;
@@ -131,9 +119,6 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .quote-form h2 {
-    font-size: 32px;
-  }
 
   .form-group input,
   .form-group select,
@@ -144,7 +129,4 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .quote-form h2 {
-    font-size: 36px;
   }
-}

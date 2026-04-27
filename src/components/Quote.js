@@ -81,7 +81,7 @@ const Quote = () => {
   return (
     <section className="quote-section" id="quote">
       <div className="quote-form">
-        <h2>Get a Free Quote</h2>
+        <h2 className="section-title">Get a Free Quote</h2>
         {submitSuccess && (
           <div className="success-message">
             Form submitted successfully!
