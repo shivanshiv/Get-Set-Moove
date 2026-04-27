@@ -9,11 +9,15 @@ const Photos = () => {
         <div className="photos-grid">
           {Array.from({ length: 28 }, (_, i) => {
             const photoIndex = i + 1;
-            const photoSrc = `${process.env.PUBLIC_URL}/images/Photos_Page/image${photoIndex}.png`;
+            const photoSrc = `${process.env.PUBLIC_URL}/images/Photos_Page/image${photoIndex}.jpg`;
 
             return (
               <div key={photoIndex} className="photo-placeholder">
-                <img src={photoSrc} alt={`Gallery item ${photoIndex}`} />
+                <img 
+                  src={photoSrc} 
+                  alt={`Gallery item ${photoIndex}`} 
+                  loading="lazy"
+                />
               </div>
             );
           })}
